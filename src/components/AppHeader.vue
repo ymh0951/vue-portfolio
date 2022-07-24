@@ -1,7 +1,7 @@
 <template>
     <header class="header">
         <nav class="header-menu" @mouseout="hover">
-            <router-link class="menu" to="/">Home</router-link> |
+            <router-link class="menu" to="/home">Home</router-link> |
             <router-link class="menu" to="/about">About</router-link> |
             <router-link class="menu" to="/skill">Skills</router-link> |
             <router-link class="menu" to="/project">Projects</router-link> |

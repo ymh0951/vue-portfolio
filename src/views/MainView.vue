@@ -42,8 +42,8 @@
 }
 .loader {
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
