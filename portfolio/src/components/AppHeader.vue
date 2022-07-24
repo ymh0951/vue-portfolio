@@ -1,6 +1,6 @@
 <template>
     <header class="header">
-        <nav class="header-menu">
+        <nav class="header-menu" @mouseout="hover">
             <router-link class="menu" to="/">Home</router-link> |
             <router-link class="menu" to="/about">About</router-link> |
             <router-link class="menu" to="/project">Projects</router-link> |
@@ -13,7 +13,6 @@
     import Vue from 'vue'
 
     export default Vue.extend({
-        
     })
 </script>
 

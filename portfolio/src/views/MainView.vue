@@ -1,10 +1,10 @@
 <template>
     <div class="main">
         <div class="loader">
-            <p>
+            <h1 class="main-title">
                 KongPanda<br>
                 PortFolio
-            </p>
+            </h1>
             <span style="--i:1;"></span>
             <span style="--i:2;"></span>
             <span style="--i:3;"></span>
@@ -48,7 +48,7 @@
     justify-content: center;
     align-items: center;
 }
-.loader p {
+.main-title {
     font-size: 2.5rem;
     text-align: center;
 }
