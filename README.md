@@ -1,4 +1,24 @@
-# vue-portfolio
-Vue.js 프레임워크로 제작한 포트폴리오입니다.
+# portfolio
 
-![portfolio_-_Chrome_2022-07-24_17-42-24_AdobeExpress (1) 복사](https://user-images.githubusercontent.com/23289744/180639716-b9bb7b5c-7fe9-47ef-9849-c8250ff11f39.gif)
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
