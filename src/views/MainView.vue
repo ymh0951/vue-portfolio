@@ -2,7 +2,7 @@
     <div class="main">
         <div class="loader">
             <h1 class="main-title">
-                KongPanda<br>
+                Yoo Minho<br>
                 PortFolio
             </h1>
             <span style="--i:1;"></span>
