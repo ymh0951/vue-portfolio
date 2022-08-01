@@ -1,6 +1,6 @@
 <template>
     <header class="header">
-        <nav class="header-menu" @mouseout="hover">
+        <nav class="header-menu">
             <router-link class="menu" to="/home">Home</router-link> |
             <router-link class="menu" to="/about">About</router-link> |
             <router-link class="menu" to="/skill">Skills</router-link> |

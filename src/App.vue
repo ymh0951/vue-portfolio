@@ -1,6 +1,6 @@
 <template>
-  <div id="app" @mousemove="cursor">
-    <div class="cursor" ref="cursor"></div>
+  <div id="app" @mousemove="cursorMove">
+    <span class="cursor" ref="cursor"></span>
     <AppHeader></AppHeader>
     <transition name="fade">
       <router-view />
@@ -17,9 +17,11 @@ export default Vue.extend({
     AppHeader,
   },
   methods: {
-    cursor(e: MouseEvent): void {
-      this.$refs.cursor.style.top = e.clientY + 'px';
-      this.$refs.cursor.style.left = e.clientX + 'px';
+    cursorMove(e: MouseEvent): void {
+      const cursor = this.$refs.cursor as HTMLElement;
+      
+      cursor.style.top = e.clientY + 'px';
+      cursor.style.left = e.clientX + 'px';
     }
   },
 })
