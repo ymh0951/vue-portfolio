@@ -2,8 +2,7 @@
     <div class="main">
         <div class="loader">
             <h1 class="main-title">
-                Yoo Minho<br>
-                PortFolio
+                {{ title }}
             </h1>
             <span style="--i:1;"></span>
             <span style="--i:2;"></span>
@@ -23,7 +22,11 @@
     import Vue from 'vue'
 
     export default Vue.extend({
-        
+        data() {
+            return {
+                title: 'Yoo Minho PortFolio' as string,
+            }
+        },
     })
 </script>
 
