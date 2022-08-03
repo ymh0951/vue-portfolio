@@ -44,16 +44,6 @@ export default Vue.extend({
                     '엑스퍼트컨설팅 HRM 사이트 프론트엔드 담당',
                     ]
                 },
-                {
-                    image: require(`../../assets/minho.jpg`),
-                    title: '네이버',
-                    date: '2022-01-01 ~ ing',
-                    value: [
-                        '된건가',
-                        '된건가요 ?',
-                        '뿌잉 ?',
-                    ]
-                }
             ] as experience[],
         }
     },
