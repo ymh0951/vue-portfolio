@@ -10,10 +10,10 @@
 </template>
 
 <script lang="ts">
-    import Vue from 'vue'
+import Vue from 'vue'
 
-    export default Vue.extend({
-    })
+export default Vue.extend({
+})
 </script>
 
 <style scoped>
@@ -30,6 +30,7 @@
 .menu {
     margin: 0 1rem;
     font-size: 1.3rem;
+    text-decoration: none;
     transition: .5s;
 }
 .router-link-exact-active {

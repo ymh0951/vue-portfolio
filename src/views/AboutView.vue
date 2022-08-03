@@ -3,6 +3,7 @@
         <div class="about_box">
             <AboutMe></AboutMe>
             <Skills></Skills>
+            <Experience></Experience>
         </div>
     </div>
 </template>
@@ -11,11 +12,13 @@
 import Vue from 'vue'
 import AboutMe from '@/components/About/AboutMe.vue'
 import Skills from '@/components/About/Skills.vue'
+import Experience from '@/components/About/Experience.vue'
 
-    export default Vue.extend({
+export default Vue.extend({
     components: {
         AboutMe,
         Skills,
+        Experience
     },
 })
 </script>

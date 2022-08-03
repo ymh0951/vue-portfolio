@@ -19,15 +19,15 @@
 </template>
 
 <script lang="ts">
-    import Vue from 'vue'
+import Vue from 'vue'
 
-    export default Vue.extend({
-        data() {
-            return {
-                title: 'Yoo Minho PortFolio' as string,
-            }
-        },
-    })
+export default Vue.extend({
+    data() {
+        return {
+            title: 'Yoo Minho PortFolio' as string,
+        }
+    },
+})
 </script>
 
 <style scoped>
