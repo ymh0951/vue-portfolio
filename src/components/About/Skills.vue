@@ -1,20 +1,35 @@
 <template>
     <div class="about_in_box introduce">
-        <h1 class="about_title introduce_title">Skills</h1>
-        <div class="skills_box">
-            <h2 class="skill_">Front-End</h2>
-        </div>
+        <h1 class="about_title introduce_title">{{ title }}</h1>
+        <FrontEnd></FrontEnd>
+        <BackEnd></BackEnd>
+        <ETC></ETC>
     </div>
 </template>
 
+
 <script lang="ts">
 import Vue from 'vue'
+import FrontEnd from './Skills/FrontEnd.vue'
+import BackEnd from './Skills/BackEnd.vue'
+import ETC from './Skills/ETC.vue'
 
 export default Vue.extend({
+    components: { 
+        FrontEnd,
+        BackEnd,
+        ETC,
+    },
+    data() {
+        return {
+            title: 'Skills' as string,
+        }
+    },
 })
 </script>
 
 <style scoped>
+
 .about {
     width: 100vw;
     height: 90vh;
@@ -36,25 +51,15 @@ export default Vue.extend({
     margin-bottom: 1.5rem;
     border-bottom: 1px dashed white;
 }
-
-.about_in_flex_box {
+.skill_title {
+    font-size: 2rem;
+}
+.skill_list {
+    padding: 1.5rem 0;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+}
+.skill {
+    margin: 0 1.5rem;
 }
 
-.introduce_image {
-    width: 20%;
-}
-
-.introduce_image img {
-    width: 100%;
-    border-radius: 50%;
-    box-shadow: 5px 5px 20px 0px black;
-}
-
-.introduce_text {
-    width: 65%;
-    font-size: 1.3rem;
-}
 </style>
