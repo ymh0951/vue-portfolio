@@ -45,10 +45,12 @@ export default Vue.extend({
   cursor: none;
   font-family: "Apple SD Gothic Neo";
 }
+
 body {
   overflow: hidden;
   background: #303030;
 }
+
 .cursor {
   width: 25px;
   height: 25px;
@@ -60,6 +62,7 @@ body {
   box-shadow: 0 0 20px #00efff;
   animation: animate 5s linear infinite;
 }
+
 @keyframes animate {
   0% {
     filter: hue-rotate(0deg);
@@ -69,9 +72,11 @@ body {
     filter: hue-rotate(360deg);
   }
 }
+
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s;
 }
+
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }

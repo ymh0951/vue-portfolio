@@ -29,7 +29,6 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-
 .about {
     width: 100vw;
     height: 90vh;
@@ -51,15 +50,17 @@ export default Vue.extend({
     margin-bottom: 1.5rem;
     border-bottom: 1px dashed white;
 }
+
 .skill_title {
     font-size: 2rem;
 }
+
 .skill_list {
     padding: 1.5rem 0;
     display: flex;
 }
+
 .skill {
     margin: 0 1.5rem;
 }
-
 </style>

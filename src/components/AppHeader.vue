@@ -24,15 +24,18 @@ export default Vue.extend({
     justify-content: right;
     align-items: center;
 }
+
 .header-menu {
     margin: 1.5rem;
 }
+
 .menu {
     margin: 0 1rem;
     font-size: 1.3rem;
     text-decoration: none;
     transition: .5s;
 }
+
 .router-link-exact-active {
     color: red;
 }

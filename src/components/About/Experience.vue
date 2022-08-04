@@ -1,14 +1,14 @@
 <template>
     <div class="about_in_box experience">
         <h1 class="about_title experience_title">{{ title }}</h1>
-        <div class="about_in_flex_box experience_box" v-for="experience in experiences" :key="experience">
+        <div class="about_in_flex_box experience_box" v-for="experience in experiences" :key="experience.title">
             <div class="about_left_box experience_image">
                 <img :src="experience.image" alt="Profile Image">
             </div>
             <div class="about_right_box experience_text">
                 <div class="experience_text_title">
                     <h2>{{ experience.title }}</h2>
-                    <p>{{ experience.sdate }} ~ {{  experience.edate || '재직중' }}</p>
+                    <p>{{ experience.sDate }} ~ {{  experience.eDate || '재직중' }} ({{ experience.totalDate }})</p>
                 </div>
                 <ul>
                     <li v-for="value in experience.value" :key="value">{{ value }}</li>
@@ -25,8 +25,9 @@ import Vue from 'vue'
 interface experience {
     image: string,
     title: string,
-    sdate: string,
-    edate: string,
+    sDate: string,
+    eDate: string,
+    totalDate: string,
     value: string[],
 }
 
@@ -34,34 +35,66 @@ export default Vue.extend({
     data() {
         return {
             title: 'Experience' as string,
+            /*
+                ** 데이터 입력 주의사항 **
+                현재 재직중이면 eDate는 비워둘 것.
+                totalDate는 자동으로 계산해주므로 항상 비워둘 것.
+            */
             experiences: [
                 {
                     image: require(`../../assets/expert-consulting.jpg`),
                     title: '엑스퍼트컨설팅',
-                    sdate: '2022-01-03',
-                    edate: '',
+                    sDate: '2022-01-03',
+                    eDate: '',
+                    totalDate: '',
                     value: [
                     'HRM 성과지원팀 IT지원파트',
-                    '프론트엔드 담당, HRM 입사지원서 커스터마이징 작업',
-                    '성남시, 고양시 통합 채용, 기업채용 현장지원 사업, 리크루트온 프론트엔드 개발 및 유지 보수',
+                    'HRM 부문 프론트엔드 담당',
+                    '성남시 통합 채용, 고양시 통합 채용 사이트 구축',
+                    '기업채용 현장지원 사업 프론트엔드 개발 및 유지 보수',
+                    'HRM 리크루트온 프론트엔드 개발 및 유지 보수'
                     ]
                 },
             ] as experience[],
+        }
+    },
+    created () {
+        this.totalDateCalculation();
+    },
+    methods: {
+        totalDateCalculation() {
+            const experiences: experience[] = this.experiences;
+
+            for (let experience of experiences) {
+                let sDate: Date, eDate: Date;
+
+                if (experience.eDate) {
+                    sDate = new Date(experience.sDate);
+                    eDate = new Date(experience.eDate);
+                } else { 
+                    // 재직중이라면 eDate가 현재 날짜로 기재
+                    sDate = new Date(experience.sDate);
+                    eDate = new Date();
+                }
+
+                if (eDate.getFullYear() - sDate.getFullYear()) { 
+                    // 경력이 1년 이상이라면
+                    experience.totalDate = `${eDate.getFullYear() - sDate.getFullYear()}년 ${eDate.getMonth() - sDate.getMonth() + 1}개월`;
+                } else { 
+                    // 경력이 1년 이하이면
+                    experience.totalDate = `${eDate.getMonth() - sDate.getMonth() + 1}개월`;
+                }
+            } // For End  
         }
     },
 })
 </script>
 
 <style scoped>
-
-
-
-
-
-
 .about_in_box {
     margin-bottom: 2rem;
 }
+
 .about_title {
     text-align: center;
     padding: 1rem;
@@ -97,7 +130,7 @@ export default Vue.extend({
 }
 
 .experience_text_title p{
-    width: 20%;
+    width: 30%;
     text-align: center;
     font-size: .9rem;
     padding: .4rem 0;
