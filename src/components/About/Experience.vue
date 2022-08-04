@@ -8,7 +8,7 @@
             <div class="about_right_box experience_text">
                 <div class="experience_text_title">
                     <h2>{{ experience.title }}</h2>
-                    <span>{{ experience.date }}</span>
+                    <p>{{ experience.sdate }} ~ {{  experience.edate || '재직중' }}</p>
                 </div>
                 <ul>
                     <li v-for="value in experience.value" :key="value">{{ value }}</li>
@@ -25,7 +25,8 @@ import Vue from 'vue'
 interface experience {
     image: string,
     title: string,
-    date: string,
+    sdate: string,
+    edate: string,
     value: string[],
 }
 
@@ -37,11 +38,12 @@ export default Vue.extend({
                 {
                     image: require(`../../assets/minho.jpg`),
                     title: '엑스퍼트컨설팅',
-                    date: '2022-01-03 ~ 재직중',
+                    sdate: '2022-01-03',
+                    edate: '',
                     value: [
-                    '프론트엔드팀',
-                    'HRM 사업지원팀 IT지원',
-                    '엑스퍼트컨설팅 HRM 사이트 프론트엔드 담당',
+                    'HRM 성과지원팀 IT지원파트',
+                    '프론트엔드 담당, HRM 입사지원서 커스터마이징 작업',
+                    '성남시, 고양시 통합 채용, 기업채용 현장지원 사업, 리크루트온 프론트엔드 개발 및 유지 보수',
                     ]
                 },
             ] as experience[],
@@ -60,7 +62,6 @@ export default Vue.extend({
 .about_in_box {
     margin-bottom: 2rem;
 }
-
 .about_title {
     text-align: center;
     padding: 1rem;
@@ -91,16 +92,16 @@ export default Vue.extend({
 }
 
 .experience_text_title {
-    display: flex;
-    align-items: center;
     margin-bottom: 2rem;
     font-size: 1.5rem;
 }
 
-.experience_text_title span{
+.experience_text_title p{
+    width: 20%;
+    text-align: center;
     font-size: .9rem;
-    margin-left: 1.5rem;
-    padding: .5rem;
+    padding: .4rem 0;
+    margin-top: 1rem;
     border-radius: .5rem;
     box-shadow: 0 0 20px 5px #00477a;
     background-color: #0073c5;
