@@ -6,9 +6,13 @@
                 <img :src="experience.image" alt="Profile Image">
             </div>
             <div class="about_right_box experience_text">
-                <div class="experience_text_title">
-                    <h2>{{ experience.title }}</h2>
-                    <p>{{ experience.sDate }} ~ {{  experience.eDate || '재직중' }} ({{ experience.totalDate }})</p>
+                <div class="experience_title">
+                    <div class="experience_top_title">
+                        <h2>{{ experience.title }}</h2>
+                        <small><a :href="experience.website">{{ experience.website }}</a></small>
+                    </div>
+                    <small>{{ experience.solution }}</small>
+                    <p>{{ experience.sDate }} ~ {{ experience.eDate || '재직중' }} ({{ experience.totalDate }})</p>
                 </div>
                 <ul>
                     <li v-for="value in experience.value" :key="value">{{ value }}</li>
@@ -25,6 +29,8 @@ import Vue from 'vue'
 interface experience {
     image: string,
     title: string,
+    solution: string,
+    website: string,
     sDate: string,
     eDate: string,
     totalDate: string,
@@ -44,15 +50,16 @@ export default Vue.extend({
                 {
                     image: require(`../../assets/expert-consulting.jpg`),
                     title: '엑스퍼트컨설팅',
+                    solution: 'Vue.js 프론트엔드 개발자',
+                    website: 'https://www.exc.co.kr/',
                     sDate: '2022-01-03',
                     eDate: '',
                     totalDate: '',
                     value: [
-                    'HRM 성과지원팀 IT지원파트',
-                    'HRM 부문 프론트엔드 담당',
-                    '성남시 통합 채용, 고양시 통합 채용 사이트 구축',
+                    'HRM 리크루트온 프론트엔드 개발 및 유지 보수',
+                    '성남시 통합 채용 사이트 구축',
+                    '고양시 통합 채용 사이트 구축',
                     '기업채용 현장지원 사업 프론트엔드 개발 및 유지 보수',
-                    'HRM 리크루트온 프론트엔드 개발 및 유지 보수'
                     ]
                 },
             ] as experience[],
@@ -91,6 +98,7 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+
 .about_in_box {
     margin-bottom: 2rem;
 }
@@ -124,12 +132,30 @@ export default Vue.extend({
     font-size: 1.2rem;
 }
 
-.experience_text_title {
+.experience_title {
     margin-bottom: 2rem;
     font-size: 1.5rem;
 }
 
-.experience_text_title p{
+.experience_top_title {
+    display: flex;
+    align-items: center;
+}
+
+.experience_top_title small {
+    margin-left: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.experience_title small a {
+    text-decoration: none;
+}
+
+.experience_title small a:hover {
+    text-decoration: underline;
+}
+
+.experience_title p{
     width: 30%;
     text-align: center;
     font-size: .9rem;
