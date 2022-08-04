@@ -36,7 +36,7 @@ export default Vue.extend({
             title: 'Experience' as string,
             experiences: [
                 {
-                    image: require(`../../assets/minho.jpg`),
+                    image: require(`../../assets/expert-consulting.jpg`),
                     title: '엑스퍼트컨설팅',
                     sdate: '2022-01-03',
                     edate: '',
