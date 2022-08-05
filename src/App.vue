@@ -28,6 +28,8 @@ export default Vue.extend({
 </script>
 
 <style>
+
+
 @font-face {
   font-family: "Apple SD Gothic Neo";
   src: url("//db.onlinewebfonts.com/t/67680f2eb947c5cbd58b40961b4a61e9.eot");
@@ -48,7 +50,8 @@ export default Vue.extend({
 
 body {
   overflow: hidden;
-  background: #303030;
+  background: rgb(35, 35, 35);
+  background: linear-gradient(0deg, rgba(35, 35, 35, 1) 35%, rgba(93, 93, 93, 1) 100%);
 }
 
 .cursor {

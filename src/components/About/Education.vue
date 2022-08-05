@@ -12,11 +12,8 @@
                         <small><a :href="education.website">{{ education.website }}</a></small>
                     </div>
                     <small>{{ education.solution }}</small>
-                    <p>{{ education.sDate }} ~ {{ education.eDate || '재직중' }} ({{ education.total }})</p>
+                    <p>{{ education.sDate }} ~ {{ education.eDate || '재학중' }} ({{ education.total }})</p>
                 </div>
-                <ul>
-                    <li v-for="value in education.value" :key="value">{{ value }}</li>
-                </ul>
             </div>
         </div>
     </div>
@@ -59,6 +56,15 @@ export default Vue.extend({
                     eDate: '2021-02-18',
                     total: '',
                 },
+                {
+                    image: require(`../../assets/sejeong.jpg`),
+                    title: '세정고등학교',
+                    solution: '상업고 스마트경영과',
+                    website: 'www.sejeong.hs.kr/',
+                    sDate: '2014-03-03',
+                    eDate: '2017-02-14',
+                    total: '',
+                }
             ] as education[],
         }
     },
@@ -82,9 +88,6 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-
-
-
 .about_in_box {
     margin-bottom: 2rem;
 }
@@ -148,7 +151,7 @@ export default Vue.extend({
     padding: .4rem 0;
     margin-top: 1rem;
     border-radius: .5rem;
-    box-shadow: 0 0 20px 5px #a11717;
-    background-color: #c50000;
+    box-shadow: 0 0 20px 5px #0b6400;
+    background-color: #12a300;
 }
 </style>
