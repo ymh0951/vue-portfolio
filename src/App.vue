@@ -1,6 +1,5 @@
 <template>
-  <div id="app" @mousemove="cursorMove">
-    <span class="cursor" ref="cursor"></span>
+  <div id="app">
     <AppHeader></AppHeader>
     <transition name="fade">
       <router-view />
@@ -15,14 +14,6 @@ import AppHeader from '@/components/AppHeader.vue';
 export default Vue.extend({
   components: {
     AppHeader,
-  },
-  methods: {
-    cursorMove(e: MouseEvent): void {
-      const cursor = this.$refs.cursor as HTMLElement;
-      
-      cursor.style.top = e.clientY + 'px';
-      cursor.style.left = e.clientX + 'px';
-    },
   },
 })
 </script>
@@ -44,7 +35,6 @@ export default Vue.extend({
   margin: 0;
   padding: 0;
   color: white;
-  cursor: none;
   font-family: "Apple SD Gothic Neo";
 }
 
@@ -52,18 +42,6 @@ body {
   overflow: hidden;
   background: rgb(35, 35, 35);
   background: linear-gradient(0deg, rgba(35, 35, 35, 1) 35%, rgba(93, 93, 93, 1) 100%);
-}
-
-.cursor {
-  width: 25px;
-  height: 25px;
-  position: absolute;
-  border-radius: 50%;
-  background: #00efff;
-  border: 4px solid #00efff;
-  box-sizing: border-box;
-  box-shadow: 0 0 20px #00efff;
-  animation: animate 5s linear infinite;
 }
 
 @keyframes animate {

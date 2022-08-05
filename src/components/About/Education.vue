@@ -39,7 +39,7 @@ export default Vue.extend({
             title: 'Education' as string,
             educations: [
                 {
-                    image: require(`../../assets/SBS.jpg`),
+                    image: require(`../../assets/images/SBS.jpg`),
                     title: 'SBS아카데미컴퓨터아트학원',
                     solution: '국비과정 스마트기기UXUI디자인양성과정',
                     website: 'https://se.sbsart.com/',
@@ -48,7 +48,7 @@ export default Vue.extend({
                     total: '',
                 },
                 {
-                    image: require(`../../assets/KIT.jpg`),
+                    image: require(`../../assets/images/KIT.jpg`),
                     title: '경남정보대학교',
                     solution: 'ICT컴퓨터계열 IoT전공',
                     website: 'https://www.kit.ac.kr/',
@@ -57,7 +57,7 @@ export default Vue.extend({
                     total: '',
                 },
                 {
-                    image: require(`../../assets/sejeong.jpg`),
+                    image: require(`../../assets/images/sejeong.jpg`),
                     title: '세정고등학교',
                     solution: '상업고 스마트경영과',
                     website: 'www.sejeong.hs.kr/',

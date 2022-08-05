@@ -48,7 +48,7 @@ export default Vue.extend({
             */
             experiences: [
                 {
-                    image: require(`../../assets/expert-consulting.jpg`),
+                    image: require(`../../assets/images/expert-consulting.jpg`),
                     title: '엑스퍼트컨설팅',
                     solution: 'Vue.js 프론트엔드 개발자',
                     website: 'https://www.exc.co.kr/',

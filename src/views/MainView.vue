@@ -31,10 +31,6 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-
-
-
-
 .main {
     box-sizing: border-box;
     display: flex;

@@ -3,7 +3,7 @@
         <h1 class="about_title introduce_title">{{ title }}</h1>
         <div class="about_in_flex_box introduce_box">
             <div class="about_left_box introduce_image">
-                <img :src="require('../../assets/minho.jpg')" alt="Profile Image">
+                <img :src="require('../../assets/images/minho.jpg')" alt="Profile Image">
             </div>
             <div class="about_right_box introduce_text">
                 <p v-for="value in values" :key="value">{{ value }}</p>

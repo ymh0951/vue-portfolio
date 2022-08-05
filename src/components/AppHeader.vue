@@ -3,7 +3,7 @@
         <nav class="header-menu">
         <router-link class=" menu" to="/home">Home</router-link> |
             <router-link class="menu" to="/about">About</router-link> |
-            <router-link class="menu" to="/project">Projects</router-link> |
+            <router-link class="menu" to="/projects">Projects</router-link> |
             <router-link class="menu" to="/contact">Contact</router-link>
         </nav>
     </header>
