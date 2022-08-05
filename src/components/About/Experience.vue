@@ -14,8 +14,8 @@
                     <small>{{ experience.solution }}</small>
                     <p>{{ experience.sDate }} ~ {{ experience.eDate || '재직중' }} ({{ experience.totalDate }})</p>
                 </div>
-                <ul>
-                    <li v-for="value in experience.value" :key="value">{{ value }}</li>
+                <ul class="experience_list">
+                    <li class="experience_value" v-for="value in experience.value" :key="value">{{ value }}</li>
                 </ul>
             </div>
         </div>
@@ -53,7 +53,7 @@ export default Vue.extend({
                     solution: 'Vue.js 프론트엔드 개발자',
                     website: 'https://www.exc.co.kr/',
                     sDate: '2022-01-03',
-                    eDate: '',
+                    eDate: '2022-03-03',
                     totalDate: '',
                     value: [
                     'HRM 리크루트온 프론트엔드 개발 및 유지 보수',
@@ -99,70 +99,140 @@ export default Vue.extend({
 
 <style scoped>
 
-.about_in_box {
-    margin-bottom: 2rem;
+
+
+@media screen and (min-width: 850px) {
+    .about_in_box {
+        margin-bottom: 2rem;
+    }
+
+    .about_title {
+        text-align: center;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        border-bottom: 1px dashed white;
+    }
+
+    .about_in_flex_box {
+        margin: 5rem 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .experience_image {
+        width: 15%;
+    }
+
+    .experience_image img {
+        width: 100%;
+        border-radius: 50%;
+        box-shadow: 5px 5px 20px 0px black;
+    }
+
+    .experience_text {
+        width: 65%;
+        font-size: 1.2rem;
+    }
+
+    .experience_title {
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .experience_top_title {
+        display: flex;
+        align-items: center;
+    }
+
+    .experience_top_title small {
+        margin-left: 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    .experience_title small a {
+        text-decoration: none;
+    }
+
+    .experience_title small a:hover {
+        text-decoration: underline;
+    }
+
+    .experience_title p {
+        width: 50%;
+        text-align: center;
+        font-size: .9rem;
+        padding: .4rem 0;
+        margin-top: 1rem;
+        border-radius: .5rem;
+        box-shadow: 0 0 20px 5px #00477a;
+        background-color: #0073c5;
+    }
 }
 
-.about_title {
-    text-align: center;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-    border-bottom: 1px dashed white;
-}
+@media screen and (max-width: 849px) {
+    .about_in_box {
+        margin-bottom: 2rem;
+    }
 
-.about_in_flex_box {
-    margin: 5rem 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
+    .about_title {
+        text-align: center;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        border-bottom: 1px dashed white;
+    }
 
-.experience_image {
-    width: 15%;
-}
+    .about_in_flex_box {
+        margin: 5rem 0;
+    }
 
-.experience_image img {
-    width: 100%;
-    border-radius: 50%;
-    box-shadow: 5px 5px 20px 0px black;
-}
+    .experience_image {
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 10%;
+    }
 
-.experience_text {
-    width: 65%;
-    font-size: 1.2rem;
-}
+    .experience_image img {
+        width: 100%;
+        border-radius: 50%;
+        box-shadow: 5px 5px 20px 0px black;
+    }
 
-.experience_title {
-    margin-bottom: 2rem;
-    font-size: 1.5rem;
-}
+    .experience_text {
+        width: 100%;
+        font-size: 1.2rem;
+    }
 
-.experience_top_title {
-    display: flex;
-    align-items: center;
-}
+    .experience_title {
+        margin-bottom: 2rem;
+        font-size: 1.3rem;
+    }
 
-.experience_top_title small {
-    margin-left: 1.5rem;
-    font-size: 1.2rem;
-}
+    .experience_top_title small {
+        font-size: 1.2rem;
+    }
 
-.experience_title small a {
-    text-decoration: none;
-}
+    .experience_title small a {
+        text-decoration: none;
+    }
 
-.experience_title small a:hover {
-    text-decoration: underline;
-}
+    .experience_title small a:hover {
+        text-decoration: underline;
+    }
 
-.experience_title p{
-    width: 30%;
-    text-align: center;
-    font-size: .9rem;
-    padding: .4rem 0;
-    margin-top: 1rem;
-    border-radius: .5rem;
-    box-shadow: 0 0 20px 5px #00477a;
-    background-color: #0073c5;
+    .experience_title p {
+        width: 60%;
+        text-align: center;
+        font-size: .9rem;
+        padding: .4rem 0;
+        margin-top: 1rem;
+        border-radius: .5rem;
+        box-shadow: 0 0 20px 5px #00477a;
+        background-color: #0073c5;
+    }
+
+    .experience_list {
+        font-size: 1.2rem;
+    }
 }
 </style>

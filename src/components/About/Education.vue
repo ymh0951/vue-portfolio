@@ -88,70 +88,135 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-.about_in_box {
-    margin-bottom: 2rem;
+
+@media screen and (min-width: 920px) {
+    .about_in_box {
+        margin-bottom: 2rem;
+    }
+
+    .about_title {
+        text-align: center;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        border-bottom: 1px dashed white;
+    }
+
+    .about_in_flex_box {
+        margin: 5rem 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .education_image {
+        width: 15%;
+    }
+
+    .education_image img {
+        width: 100%;
+        border-radius: 50%;
+        box-shadow: 5px 5px 20px 0px black;
+    }
+
+    .education_text {
+        width: 65%;
+        font-size: 1.2rem;
+    }
+
+    .education_title {
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .education_top_title {
+        display: flex;
+        align-items: center;
+    }
+
+    .education_top_title small {
+        margin-left: 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    .education_title small a {
+        text-decoration: none;
+    }
+
+    .education_title small a:hover {
+        text-decoration: underline;
+    }
+
+    .education_title p {
+        width: 45%;
+        text-align: center;
+        font-size: .9rem;
+        padding: .4rem 0;
+        margin-top: 1rem;
+        border-radius: .5rem;
+        box-shadow: 0 0 20px 5px #0b6400;
+        background-color: #12a300;
+    }
 }
 
-.about_title {
-    text-align: center;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-    border-bottom: 1px dashed white;
-}
+@media screen and (max-width: 919px) {
+    .about_in_box {
+        margin-bottom: 2rem;
+    }
 
-.about_in_flex_box {
-    margin: 5rem 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
+    .about_title {
+        text-align: center;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        border-bottom: 1px dashed white;
+    }
 
-.education_image {
-    width: 15%;
-}
+    .about_in_flex_box {
+        margin: 5rem 0;
+    }
 
-.education_image img {
-    width: 100%;
-    border-radius: 50%;
-    box-shadow: 5px 5px 20px 0px black;
-}
+    .education_image {
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 10%;
+    }
 
-.education_text {
-    width: 65%;
-    font-size: 1.2rem;
-}
+    .education_image img {
+        width: 100%;
+        border-radius: 50%;
+        box-shadow: 5px 5px 20px 0px black;
+    }
 
-.education_title {
-    margin-bottom: 2rem;
-    font-size: 1.5rem;
-}
+    .education_text {
+        width: 100%;
+        font-size: 1.2rem;
+    }
 
-.education_top_title {
-    display: flex;
-    align-items: center;
-}
+    .education_title {
+        margin-bottom: 2rem;
+        font-size: 1.3rem;
+    }
 
-.education_top_title small {
-    margin-left: 1.5rem;
-    font-size: 1.2rem;
-}
+    .education_top_title small {
+        font-size: 1.2rem;
+    }
 
-.education_title small a {
-    text-decoration: none;
-}
+    .education_title small a {
+        text-decoration: none;
+    }
 
-.education_title small a:hover {
-    text-decoration: underline;
-}
+    .education_title small a:hover {
+        text-decoration: underline;
+    }
 
-.education_title p {
-    width: 30%;
-    text-align: center;
-    font-size: .9rem;
-    padding: .4rem 0;
-    margin-top: 1rem;
-    border-radius: .5rem;
-    box-shadow: 0 0 20px 5px #0b6400;
-    background-color: #12a300;
+    .education_title p {
+        width: 60%;
+        text-align: center;
+        font-size: .9rem;
+        padding: .4rem 0;
+        margin-top: 1rem;
+        border-radius: .5rem;
+        box-shadow: 0 0 20px 5px #0b6400;
+        background-color: #12a300;
+    }
 }
 </style>

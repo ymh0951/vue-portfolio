@@ -20,7 +20,6 @@
 </script>
 
 <style scoped>
-
 .skill_title {
     font-size: 2rem;
 }
@@ -28,6 +27,7 @@
 .skill_list {
     padding: 1.5rem 0;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .skill {

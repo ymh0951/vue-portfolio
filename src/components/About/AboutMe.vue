@@ -30,34 +30,68 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-.about_in_box {
-    margin-bottom: 2rem;
-}
-.about_title {
-    text-align: center;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-    border-bottom: 1px dashed white;
-}
 
-.about_in_flex_box {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
+@media screen and (min-width: 1000px){
+    .about_in_box {
+            margin-bottom: 2rem;
+        }
 
-.introduce_image {
-    width: 20%;
-}
+    .about_title {
+        text-align: center;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        border-bottom: 1px dashed white;
+    }
 
-.introduce_image img {
-    width: 100%;
-    border-radius: 50%;
-    box-shadow: 5px 5px 20px 0px black;
-}
+    .about_in_flex_box {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
 
-.introduce_text {
-    width: 65%;
-    font-size: 1.3rem;
+    .introduce_image {
+        width: 20%;
+    }
+
+    .introduce_image img {
+        width: 100%;
+        border-radius: 50%;
+        box-shadow: 5px 5px 20px 0px black;
+    }
+
+    .introduce_text {
+        width: 65%;
+        font-size: 1.3rem;
+    }
+}
+@media screen and (max-width: 999px) and (min-width: 400px) {
+    .about_in_box {
+        margin-bottom: 2rem;
+    }
+
+    .about_title {
+        text-align: center;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        border-bottom: 1px dashed white;
+    }
+
+    .introduce_image {
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: 10%;
+    }
+
+    .introduce_image img {
+        width: 100%;
+        border-radius: 50%;
+        box-shadow: 5px 5px 20px 0px black;
+    }
+
+    .introduce_text {
+        width: 100%;
+        font-size: 1.3rem;
+        margin: 0 auto;
+    }
 }
 </style>
