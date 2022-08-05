@@ -221,7 +221,7 @@ export default Vue.extend({
     }
 
     .experience_title p {
-        width: 60%;
+        width: 75%;
         text-align: center;
         font-size: .9rem;
         padding: .4rem 0;

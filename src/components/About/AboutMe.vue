@@ -64,7 +64,7 @@ export default Vue.extend({
         font-size: 1.3rem;
     }
 }
-@media screen and (max-width: 999px) and (min-width: 400px) {
+@media screen and (max-width: 999px) {
     .about_in_box {
         margin-bottom: 2rem;
     }

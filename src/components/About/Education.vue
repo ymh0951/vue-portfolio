@@ -209,7 +209,7 @@ export default Vue.extend({
     }
 
     .education_title p {
-        width: 60%;
+        width: 75%;
         text-align: center;
         font-size: .9rem;
         padding: .4rem 0;
