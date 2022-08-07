@@ -53,7 +53,7 @@ export default Vue.extend({
                     solution: 'Vue.js 프론트엔드 개발자',
                     website: 'https://www.exc.co.kr/',
                     sDate: '2022-01-03',
-                    eDate: '2022-03-03',
+                    eDate: '',
                     totalDate: '',
                     value: [
                     'HRM 리크루트온 프론트엔드 개발 및 유지 보수',
