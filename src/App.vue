@@ -19,23 +19,25 @@ export default Vue.extend({
 </script>
 
 <style>
-
-
+/* 한글 */
 @font-face {
-  font-family: "Apple SD Gothic Neo";
-  src: url("//db.onlinewebfonts.com/t/67680f2eb947c5cbd58b40961b4a61e9.eot");
-  src: url("//db.onlinewebfonts.com/t/67680f2eb947c5cbd58b40961b4a61e9.eot?#iefix") format("embedded-opentype"),
-  url("//db.onlinewebfonts.com/t/67680f2eb947c5cbd58b40961b4a61e9.woff2") format("woff2"),
-  url("//db.onlinewebfonts.com/t/67680f2eb947c5cbd58b40961b4a61e9.woff") format("woff"),
-  url("//db.onlinewebfonts.com/t/67680f2eb947c5cbd58b40961b4a61e9.ttf") format("truetype"),
-  url("//db.onlinewebfonts.com/t/67680f2eb947c5cbd58b40961b4a61e9.svg#Apple SD Gothic Neo") format("svg");
+  font-family: 'NotoSansKR-Regular';
+  src: url('./assets/fonts/NotoSansKR-Regular.otf') format('woff');
+  unicode-range: U+AC00-D7A3;
+}
+
+/* 영어 */
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('./assets/fonts/Roboto-Regular.ttf') format('woff');
+  unicode-range: U+0041-005A, U+0061-007A;
 }
 
 * {
   margin: 0;
   padding: 0;
   color: white;
-  font-family: "Apple SD Gothic Neo";
+  font-family: 'NotoSansKR-Regular', 'Roboto-Regular';
 }
 
 body {
