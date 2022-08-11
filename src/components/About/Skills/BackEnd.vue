@@ -13,7 +13,14 @@
     export default Vue.extend({
         data() {
             return {
-                skills: ['Node.js', 'Express', 'MySQL', 'Sequelize', 'MongoDB', 'Socket.io'] as string[],
+                skills: [
+                    'Node.js',
+                    'Express',
+                    'MySQL',
+                    'Sequelize',
+                    'MongoDB',
+                    'Socket.io'
+                ] as string[],
             }
         },
     })

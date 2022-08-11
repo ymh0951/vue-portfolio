@@ -37,6 +37,9 @@ export default Vue.extend({
     data() {
         return {
             title: 'Education' as string,
+            /* 
+                educations 배열의 total은 sDate와 eDate를 통해 계산해서 자동으로 입력해줍니다.
+            */
             educations: [
                 {
                     image: require(`../../assets/images/SBS.jpg`),

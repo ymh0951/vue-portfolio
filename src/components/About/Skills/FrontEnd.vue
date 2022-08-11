@@ -13,7 +13,17 @@
     export default Vue.extend({
         data() {
             return {
-                skills: ['HTML5', 'CSS3', 'Javascript', 'Typescript', 'jQuery', 'Vue.js', 'Nuxt.js', 'Webpack', 'Bootstrap'] as string[],
+                skills: [
+                    'HTML5',
+                    'CSS3',
+                    'Javascript',
+                    'Typescript',
+                    'jQuery',
+                    'Vue.js',
+                    'Nuxt.js',
+                    'Webpack', 
+                    'Bootstrap'
+                ] as string[],
             }
         },
     })

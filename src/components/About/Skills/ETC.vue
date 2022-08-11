@@ -13,7 +13,12 @@
     export default Vue.extend({
         data() {
             return {
-                skills: ['Adobe Photoshop', 'Adobe Illustrator', 'npm', 'Jest'] as string[],
+                skills: [
+                    'Adobe Photoshop',
+                    'Adobe Illustrator',
+                    'npm',
+                    'Jest'
+                ] as string[],
             }
         },
     })
